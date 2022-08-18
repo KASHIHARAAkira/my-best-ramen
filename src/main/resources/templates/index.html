@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link th:href="@{/css/index.css}" rel="stylesheet">
+    <script th:src="@{/js/closure-library/closure/goog/base.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
 </head>
 <body>
-<span th:text = "${time}"></span>
+<div id="notes"></div>
+
+<script>
+      function main() {
+        var noteData = [
+          { title: "Note 1", content: "Content of Note 1" },
+          { title: "Note 2", content: "Content of Note 2" },
+        ];
+
+        var noteListElement = document.getElementById("notes");
+        var notes = tutorial.notepad.makeNotes(noteData, noteListElement);
+      }
+      main();
+    </script>
 </body>
 </html>
