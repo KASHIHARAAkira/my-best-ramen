@@ -28,6 +28,7 @@ public class WebSecurityConfig {
                 .mvcMatchers("/mypage").permitAll()
                 .mvcMatchers("/css/**").permitAll()
                 .mvcMatchers("/js/**").permitAll()
+                .mvcMatchers("/img/**").permitAll()
                 .mvcMatchers("/general").hasRole("GENERAL")
                 .mvcMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()

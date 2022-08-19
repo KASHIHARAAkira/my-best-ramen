@@ -1,3 +1,16 @@
-span {
-    color: #f00;
+.vote-banner {
+    height: 70px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.vote-banner-text {
+    font-size: 25px;
+    margin-right: 20px;
+    line-height: 70px;
+}
+
+.vote-banner-img {
+    height: 100%;
 }
