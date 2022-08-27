@@ -48,7 +48,7 @@ ranking.ramen.Item = class {
         this.rankingElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
             {class: "item-in-header"},
-            this.ranking.toString()
+            this.ranking.toString() + "位"
         );
 
         // Store name display
@@ -62,7 +62,7 @@ ranking.ramen.Item = class {
         this.votesNumberElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
             {class: "item-in-header"},
-            this.votes.toString()
+            this.votes.toString() + "票"
         )
 
         // Item header
@@ -133,7 +133,7 @@ ranking.ramen.Item = class {
 
         let newItem = goog.dom.createDom(
             goog.dom.TagName.DIV,
-            null,
+            {class: "wrap-head-content"},
             this.headerElement,
             this.contentContainer
         );
