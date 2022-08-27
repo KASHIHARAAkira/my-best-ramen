@@ -14,3 +14,51 @@
 .vote-banner-img {
     height: 100%;
 }
+
+.head-shop-name {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    padding: 10px 0;
+}
+
+.item-in-header {
+    margin: 0 0;
+}
+
+.items-in-contents {
+    border: 1px solid;
+    display: flex;
+    padding: 10px;
+    background: #E8F5E9;
+}
+
+.store-name-in-content {
+    display: block;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.zip-in-content {
+    display: block;
+    font-size: 15px;
+}
+
+.address-in-content {
+    display: block;
+    font-size: 15px;
+}
+
+.url-map-in-content {
+    display: block;
+    text-decoration: none;
+}
+
+.url-map-in-content {
+    font-size: 15px;
+}
+
+.img-in-content {
+    margin-right: 10px;
+}

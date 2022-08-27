@@ -47,28 +47,28 @@ ranking.ramen.Item = class {
         // Ranking text display
         this.rankingElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
-            null,
+            {class: "item-in-header"},
             this.ranking.toString()
         );
 
         // Store name display
         this.storeNameElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
-            null,
+            {class: "item-in-header"},
             this.storeName
         )
 
         // Votes display
         this.votesNumberElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
-            null,
+            {class: "item-in-header"},
             this.votes.toString()
         )
 
         // Item header
         this.headerElement = goog.dom.createDom(
             goog.dom.TagName.DIV,
-            null,
+            {class: "head-shop-name"},
             this.rankingElement,
             this.storeNameElement,
             this.votesNumberElement
@@ -77,46 +77,58 @@ ranking.ramen.Item = class {
         // Ramen Image
         this.ramenImageElement = goog.dom.createDom(
             goog.dom.TagName.IMG,
-            {src: this.urlImage},
+            {
+                src: this.urlImage,
+                class: "img-in-content"
+            },
             null
         )
 
         // Store Name in Content
         this.storeNameInContentElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
-            null,
+            {class: "store-name-in-content"},
             this.storeName
         )
 
         // Zip number
         this.zipNumberElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
-            null,
-            this.zipCode.toString()
+            {class: "zip-in-content"},
+            "〒 " + this.zipCode.toString()
         )
 
         // Address
         this.addressElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,
-            null,
+            {class: "address-in-content"},
             this.address
         )
 
         // urlMap
         this.urlMapElement = goog.dom.createDom(
-            goog.dom.TagName.SPAN,
-            null,
-            this.urlMap
+            goog.dom.TagName.A,
+            {
+                href: this.urlMap,
+                class: "url-map-in-content"
+            },
+            "🔗 Google Map"
         )
 
-        this.contentContainer = goog.dom.createDom(
+        this.wrapContents = goog.dom.createDom(
             goog.dom.TagName.DIV,
-            null,
-            this.ramenImageElement,
+            {class: "text-infos-contents"},
             this.storeNameInContentElement,
             this.zipNumberElement,
             this.addressElement,
             this.urlMapElement
+        )
+
+        this.contentContainer = goog.dom.createDom(
+            goog.dom.TagName.DIV,
+            {class: "items-in-contents"},
+            this.ramenImageElement,
+            this.wrapContents
         )
 
         let newItem = goog.dom.createDom(
