@@ -42,8 +42,7 @@ ranking.ramen.Item = class {
     * Create the DOM structure for the item and adds it to the document.
     */
     makeItemDom() {
-    console.log("🙀");
-    console.log(this.ranking.toString());
+
         // Ranking text display
         this.rankingElement = goog.dom.createDom(
             goog.dom.TagName.SPAN,

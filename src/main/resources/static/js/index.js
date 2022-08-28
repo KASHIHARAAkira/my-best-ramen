@@ -1,5 +1,7 @@
 function main() {
 
+    const headerElement = common.components.makeHeader(document.getElementById("main-element"));
+
     let storeData = [
         { ranking: 1, storeName: "つくばラーメン", votes: 10, urlImage: "/img/ramen.png",
         zipCode: 123456, address: "茨城県つくば市猫町１−１−１", urlMap: "https://maps.google.com"},
