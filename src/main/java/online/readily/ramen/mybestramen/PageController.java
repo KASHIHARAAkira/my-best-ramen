@@ -21,7 +21,7 @@ public class PageController {
 
     @RequestMapping("/mypage")
     String mypage(Model model) {
-        model.addAttribute("time", LocalDateTime.now());
+        model.addAttribute("email", "hoge@hoge.hoge");
         return "mypage";
     }
 

@@ -2,10 +2,23 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link th:href="@{/css/mypage.css}" rel="stylesheet">
+    <title>My Bestラーメンランキング〜マイページ〜</title>
+    <link th:href="@{/css/common.css}" rel="stylesheet">
+    <link th:href="@{/css/item-ramen-shop.css}" rel="stylesheet">
+    <script th:src="@{/js/closure-library/closure/goog/base.js}"></script>
+    <script th:src="@{/js/items-ramen-shop.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/mypage.js}" defer></script>
 </head>
 <body>
-<span th:text = "${time}"></span>
+<main id="main-element">
+    <div class="email-display">
+        <span>あなたのメールアドレス</span>
+        <span th:text="${email}"></span>
+    </div>
+    <div class="ranking-area" id="rankingArea">
+    </div>
+</main>
 </body>
 </html>
+
