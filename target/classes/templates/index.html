@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link th:href="@{/css/index.css}" rel="stylesheet">
+    <link th:href="@{/css/common.css}" rel="stylesheet">
+    <link th:href="@{/css/item-ramen-shop.css}" rel="stylesheet">
     <script th:src="@{/js/closure-library/closure/goog/base.js}"></script>
-    <script th:src="@{/js/index.js}"></script>
-    <script th:src="@{/js/note.js}"></script>
+    <script th:src="@{/js/items-ramen-shop.js}"></script>
+    <script th:src="@{/js/index.js}" defer></script>
 </head>
 <body>
     <header>
@@ -26,24 +27,5 @@
     <footer>
         &copy; 2022 Akira Kashihara
     </footer>
-
-<script>
-      function main() {
-
-        let storeData = [
-            { ranking: 1, storeName: "つくばラーメン", votes: 10, urlImage: "/img/ramen.png",
-            zipCode: 123456, address: "茨城県つくば市猫町１−１−１", urlMap: "https://maps.google.com"},
-            { ranking: 2, storeName: "和歌山ラーメン", votes: 8, urlImage: "/img/ramen.png",
-            zipCode: 123456, address: "和歌山県和歌山市猫町１−１−１", urlMap: "https://maps.google.com"},
-            { ranking: 3, storeName: "京都ラーメン", votes: 6, urlImage: "/img/ramen.png",
-            zipCode: 123456, address: "京都府京都市猫町１−１−１", urlMap: "https://maps.google.com"}
-        ];
-
-        let rankingElement = document.getElementById("rankingArea");
-        let rankings = ranking.ramen.makeItems(storeData, rankingElement);
-
-      }
-      main();
-    </script>
 </body>
 </html>
