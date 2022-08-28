@@ -2,10 +2,21 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Bestラーメンランキング〜投票ログイン〜</title>
     <link th:href="@{/css/login.css}" rel="stylesheet">
+    <link th:href="@{/css/common.css}" rel="stylesheet">
+    <script th:src="@{/js/closure-library/closure/goog/base.js}"></script>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/login.js}" defer></script>
 </head>
 <body>
-<h1>Login</h1>
+    <main id="main-element">
+        <span class="text-login catch-message">投票するにはログインが必要です。</span>
+        <img src="/img/btn_google_signin_dark_normal_web.png">
+        <span class="text-login">
+            本サービスは、一人一票だけ投票ができるように、あなたのGoogleアカウントの
+            メールアドレスのみを取得し、投票結果と関連付けて保存します。
+        </span>
+    </main>
 </body>
 </html>

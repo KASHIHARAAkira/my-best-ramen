@@ -1,3 +1,15 @@
 h1 {
     color: #0f0;
 }
+
+main {
+    text-align: center;
+}
+
+.text-login {
+    display: block;
+}
+
+.catch-message {
+    font-size: 25px;
+}
