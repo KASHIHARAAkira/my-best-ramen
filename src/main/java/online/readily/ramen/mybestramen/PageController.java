@@ -20,7 +20,7 @@ public class PageController {
         return "index";
     }
 
-    @RequestMapping("/login")
+    @GetMapping("/login")
     String login() {
         return "login";
     }
@@ -44,20 +44,37 @@ public class PageController {
         User n = new User();
 
         // 入力されたメールアドレスが既に存在するか確認する
-        Iterator<User> u = userRepository.findAll().iterator();
-        while (u.hasNext()) {
-            User next = u.next();
-            String e = next.getEmail();
-            if(Objects.equals(e, email)) return "duplicated-email";
-            System.out.println(e);
+        User u = userRepository.findByEmail(email);
+        if (u == null) {
+            n.setEmail(email);
+            n.setName(name);
+            userRepository.save(n);
+
+            return "redirect:/login";
+        } else {
+            return "duplicated-email";
         }
+    }
 
-        // 入力されたメールアドレスが存在しない場合、データベースに追加
-        n.setEmail(email);
-        n.setName(name);
-        userRepository.save(n);
+    /**
+     * ログイン
+     */
+    @PostMapping(path = "/login")
+    String processLogin(@RequestParam String email,
+                        @RequestParam String name) {
+        System.out.println(email + "," + name);
 
-        return "redirect:/login";
+        User n = new User();
+
+        Iterator<User> u = userRepository.findAll().iterator();
+
+        User a = userRepository.findByNameAndEmail(name, email);
+        if (a != null) {
+            System.out.println(a.getEmail() + "," + a.getName());
+        } else {
+            System.out.println("🚨");
+        }
+        return "redirect:/";
     }
 
 }

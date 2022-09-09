@@ -12,11 +12,11 @@
 <body>
     <main id="main-element">
         <span class="text-login catch-message">投票するにはログインが必要です。</span>
-        <form action="/login">
+        <form action="/login" method="post">
             <label>メールアドレス</label>
             <input name="email" type="email" required>
-            <label>パスワード</label>
-            <input name="password" type="password" required>
+            <label>表示名</label>
+            <input name="name" type="text" required>
             <input type="submit" value="ログイン">
         </form>
         <button onclick="location.href='/signup'">アカウント作成</button>
